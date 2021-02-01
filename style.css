@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700&display=swap");
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+}
+
+#container {
+  width: 300px;
+  height: 300px;
+  background: #eeede0;
+  padding: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  border-style: dotted;
+  
+}
+
+#container.started button#start {display:none;}
+
+#start {
+  border-radius: 4px;
+  background-color: black;
+  color: white;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  outline: none;
+  padding: 5px;
+}
+
+.counter {
+  font-size: 40px;
+}
+
+#timer {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+#clicker {
+  font-size: 30px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  outline: none;
+  background: #8181eb;
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.55);
+  border: none;
+  cursor: pointer;
+}
+#clicker:active {
+  box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.55) inset;
+}
+
+#message {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  /* pointer-events: none; */
+  display: none;
+  
+}
+#message span {
+  display: none;
+}
+
+#message.message--success,
+#message.message--fail {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 40px;
+}
+#message.message--success {
+  background: #21ebbf;
+  
+}
+#message.message--success span.win-text {
+    display: block;
+}
+
+#message.message--success div {
+    display: block;
+    font-size: 14px;;
+}
+#message.message--fail {
+  background: red;
+}
+#message.message--fail span.lose-text {
+    display: block;
+}
+#message button {
+  cursor: pointer;
+  outline: none;
+  border-radius: 4px;
+  background-color: black;
+  color: white;
+  border: none;
+  font-weight: bold;
+  padding: 5px;
+
+}
+
